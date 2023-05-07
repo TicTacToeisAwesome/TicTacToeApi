@@ -14,10 +14,10 @@ public class GameController {
     private GameRepository gameRepository;
 
     @PostMapping("/game")
-    Game newGame(@RequestBody Game newGame) {return GameRepository.save(newGame);}
+    Game newGame(@RequestBody Game newGame) {return gameRepository.save(newGame);}
 
     @GetMapping("/games")
     List<Game> getAllGames() {
-        return GameRepository.findAll();
+        return gameRepository.findAll();
     }
 }
